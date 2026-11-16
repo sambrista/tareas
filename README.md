@@ -1,32 +1,34 @@
-# React + TypeScript + Vite
+# Tutorial: Aplicación de Lista de Tareas con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este es un **tutorial práctico de React** para crear una **aplicación de lista de tareas** (To-Do App). Es un proyecto educativo diseñado para el módulo de **Desarrollo Web en Entorno Cliente** del ciclo formativo en el **IES Francisco de los Ríos** en Fernán Núñez, para el curso **2026/27**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El proyecto proporciona una configuración mínima de React con TypeScript y Vite, incluyendo HMR (Hot Module Replacement) y reglas de linting con Oxlint.
 
-## React Compiler
+## Cómo probar el proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Instala [Node.js](https://nodejs.org/) si aún no está instalado.
+2. Desde la carpeta del proyecto, instala las dependencias:
 
-## Expanding the Oxlint configuration
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+3. Inicia el servidor de desarrollo:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+   ```bash
+   npm run dev
+   ```
+
+4. Abre en el navegador la dirección que muestra la terminal (normalmente `http://localhost:5173`).
+5. Comprueba que se muestra la página y prueba el botón del contador. Para comprobar la recarga en caliente, modifica y guarda `src/App.tsx`.
+
+En el estado inicial del proyecto se muestra la página de ejemplo de React y Vite. La aplicación de lista de tareas se desarrollará a lo largo del tutorial.
+
+También puedes comprobar que el proyecto compila y pasa el análisis de código:
+
+```bash
+npm run build
+npm run lint
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
