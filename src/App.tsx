@@ -1,11 +1,11 @@
+import Header from './components/Header';
+
 // src/App.tsx
 function App() {
-  const hoy = new Date().toLocaleDateString('es-ES');
-
   return (
     <div className="app">
-      <h1>Mis tareas</h1>
-      <p>Hoy es {hoy}</p>
+      <Header titulo={'Mis tareas'} subtitulo={'Organiza tu día con React'} />
+      <Header titulo={'Mis cosas que hacer'} />
     </div>
   );
 }
