@@ -24,9 +24,7 @@ npm run dev
 
 Abre en el navegador la dirección que muestra la terminal (normalmente `http://localhost:5173`).
 
-**Verificación**: Comprueba que se muestra la página y prueba el botón del contador. Para comprobar la recarga en caliente, modifica y guarda `src/App.tsx`.
-
-En el estado inicial del proyecto se muestra la página de ejemplo de React y Vite. La aplicación de lista de tareas se desarrollará a lo largo del tutorial.
+**Verificación**: Comprueba que se muestra la página con el título "Mis tareas". Para comprobar la recarga en caliente, modifica y guarda cualquier archivo en `src/` y verás los cambios en el navegador de forma inmediata.
 
 ## Compilación - Crear Versión de Producción
 
