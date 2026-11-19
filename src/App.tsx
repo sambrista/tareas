@@ -1,11 +1,18 @@
 import Header from './components/Header';
+import Card from './components/Card';
 
-// src/App.tsx
 function App() {
   return (
     <div className="app">
-      <Header titulo={'Mis tareas'} subtitulo={'Organiza tu día con React'} />
-      <Header titulo={'Mis cosas que hacer'} />
+      <Header titulo="Mis tareas" subtitulo="Organiza tu día con React" />
+
+      <Card titulo={'Nueva tarea'}>
+        <p>Aquí irá el formulario</p>
+      </Card>
+
+      <Card titulo="Listado">
+        <p>Aquí irá la lista</p>
+      </Card>
     </div>
   );
 }
