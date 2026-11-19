@@ -1,0 +1,11 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.12);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
