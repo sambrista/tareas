@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Card from './components/Card';
 import type { Tarea } from './types/Tarea';
 import TareaList from './components/TareaList';
+import { useState } from 'react';
 
 const TAREAS_INICIALES: Tarea[] = [
   { id: 1, titulo: 'Repasar los apuntes de React', prioridad: 'alta', completada: false },
@@ -10,7 +11,7 @@ const TAREAS_INICIALES: Tarea[] = [
 ];
 
 function App() {
-  const tareas = TAREAS_INICIALES;
+  const [tareas, setTareas] = useState<Tarea[]>(TAREAS_INICIALES);
 
   return (
     <div className="app">
