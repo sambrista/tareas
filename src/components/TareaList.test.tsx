@@ -9,7 +9,7 @@ const tareas: Tarea[] = [
 
 describe('TareaList', () => {
   it('renderiza un elemento por cada tarea', () => {
-    render(<TareaList tareas={tareas} />);
+    render(<TareaList tareas={tareas} onToggle={() => {}} onDelete={() => {}} />);
 
     expect(screen.getAllByRole('listitem')).toHaveLength(2);
   });

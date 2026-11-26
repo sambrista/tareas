@@ -13,6 +13,18 @@ const TAREAS_INICIALES: Tarea[] = [
 function App() {
   const [tareas, setTareas] = useState<Tarea[]>(TAREAS_INICIALES);
 
+  function alternarTarea(id: number) {
+    setTareas(
+      tareas.map((tarea) =>
+        tarea.id === id ? { ...tarea, completada: !tarea.completada } : tarea,
+      ),
+    );
+  }
+
+  function borrarTarea(id: number) {
+    setTareas(tareas.filter((tarea) => tarea.id !== id));
+  }
+
   return (
     <div className="app">
       <Header titulo="Mis tareas" subtitulo="Organiza tu día con React" />
@@ -22,7 +34,7 @@ function App() {
       </Card>
 
       <Card titulo="Listado">
-        <TareaList tareas={tareas} />
+        <TareaList tareas={tareas} onDelete={borrarTarea} onToggle={alternarTarea} />
       </Card>
     </div>
   );
