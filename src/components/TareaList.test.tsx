@@ -13,4 +13,11 @@ describe('TareaList', () => {
 
     expect(screen.getAllByRole('listitem')).toHaveLength(2);
   });
+
+  it('muestra un mensaje cuando no hay tareas', () => {
+    render(<TareaList tareas={[]} onToggle={() => {}} onDelete={() => {}} />);
+
+    expect(screen.queryByRole('listitem')).not.toBeInTheDocument();
+    expect(screen.getByText(/no hay tareas/i)).toBeInTheDocument();
+  });
 });

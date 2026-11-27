@@ -8,13 +8,17 @@ interface TareaListProps {
 }
 
 function TareaList({ tareas, onToggle, onDelete }: TareaListProps) {
-  return (
-    <ul>
-      {tareas.map((tarea) => (
-        <TareaItem key={tarea.id} tarea={tarea} onToggle={onToggle} onDelete={onDelete} />
-      ))}
-    </ul>
-  );
+  if (tareas.length == 0) {
+    return <p>No hay tareas que mostrar 🎉</p>;
+  } else {
+    return (
+      <ul>
+        {tareas.map((tarea) => (
+          <TareaItem key={tarea.id} tarea={tarea} onToggle={onToggle} onDelete={onDelete} />
+        ))}
+      </ul>
+    );
+  }
 }
 
 export default TareaList;
